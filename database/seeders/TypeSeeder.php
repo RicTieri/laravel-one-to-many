@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Generator;
+use Faker\Generator as Faker;
 
 class TypeSeeder extends Seeder
 {
@@ -21,10 +21,10 @@ class TypeSeeder extends Seeder
         ];
 
         foreach ($types as $type) {
-            $type = new Type();
-            $type->name = $type;
-            $type->color = $faker->unique()->hexColor();
-            $type->save();
+            $newType = new Type();
+            $newType->name = $type;
+            $newType->color = $faker->unique()->hexColor();
+            $newType->save();
         }
     }
 }
