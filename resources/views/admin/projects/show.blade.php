@@ -9,6 +9,9 @@
                 <h2>
                     {{ $project->title }}
                 </h2>
+                <p>
+                    {{ $project->type->name }}
+                </p>
             </div>
             <div class="col-12">
 
